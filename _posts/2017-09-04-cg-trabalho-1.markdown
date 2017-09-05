@@ -35,4 +35,4 @@ void PutPixel(Pixel *pxl)
 }
 ```
 Como resultado, temos:
-![Pixel](https://github.com/elciusferreira/elciusferreira.github.io/blob/master/assets/img/cg-trabalho-1/pixel.png)
+![Pixel]({{ https://github.com/elciusferreira/elciusferreira.github.io/blob/master}} /assets/img/pixel.png)

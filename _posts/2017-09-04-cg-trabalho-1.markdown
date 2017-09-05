@@ -34,6 +34,8 @@ void PutPixel(Pixel *pxl)
 
 }
 ```
-**
+
 Como resultado, temos:
+
+
 ![Pixel](/assets/pixel.png)

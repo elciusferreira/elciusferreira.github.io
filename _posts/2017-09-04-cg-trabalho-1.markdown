@@ -36,4 +36,4 @@ void PutPixel(Pixel *pxl)
 ```
 **
 Como resultado, temos:
-![Pixel]({{ https://github.com/elciusferreira/elciusferreira.github.io/blob/master}} /assets/pixel.png)
+![Pixel](/assets/pixel.png)

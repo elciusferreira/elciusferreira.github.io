@@ -12,7 +12,7 @@ O trabalho consiste nas implementações de algoritmos para rasterização de pr
 
 Foi utilizado neste trabalho o padrão RGBA, ou seja, cada pixel é formado por 4 componentes de cor: R para vermelho (RED), G para verde (GREEN), B para azul (BLUE) e A para o alfa (ALPHA).
 
-Manipulando o ponteiro FBptr foi possível implementar a função ** PutPixel() ** . Esta é responsável por rasterizar um ponto na memória de vídeo recebendo como parâmetro o objeto da classe Pixel, que possui a posição dele na tela (x,y) e sua cor (RGBA).  
+Manipulando o ponteiro FBptr foi possível implementar a função **PutPixel()** . Esta é responsável por rasterizar um ponto na memória de vídeo recebendo como parâmetro o objeto da classe Pixel, que possui a posição dele na tela (x,y) e sua cor (RGBA).  
 
 ```cpp
 void PutPixel(Pixel *pxl)
@@ -35,3 +35,4 @@ void PutPixel(Pixel *pxl)
 }
 ```
 Como resultado, temos:
+![Pixel]({{https://github.com/elciusferreira/elciusferreira.github.io}} /images/cg-trabalho-1/pixel.png)

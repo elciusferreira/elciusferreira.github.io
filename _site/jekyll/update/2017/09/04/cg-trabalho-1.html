@@ -88,7 +88,7 @@
 
 <p>Foi utilizado neste trabalho o padrão RGBA, ou seja, cada pixel é formado por 4 componentes de cor: R para vermelho (RED), G para verde (GREEN), B para azul (BLUE) e A para o alfa (ALPHA).</p>
 
-<p>Manipulando o ponteiro FBptr foi possível implementar a função ** PutPixel() ** . Esta é responsável por rasterizar um ponto na memória de vídeo recebendo como parâmetro o objeto da classe Pixel, que possui a posição dele na tela (x,y) e sua cor (RGBA).</p>
+<p>Manipulando o ponteiro FBptr foi possível implementar a função <strong>PutPixel()</strong> . Esta é responsável por rasterizar um ponto na memória de vídeo recebendo como parâmetro o objeto da classe Pixel, que possui a posição dele na tela (x,y) e sua cor (RGBA).</p>
 
 <div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">PutPixel</span><span class="p">(</span><span class="n">Pixel</span> <span class="o">*</span><span class="n">pxl</span><span class="p">)</span>
 <span class="p">{</span>
@@ -110,7 +110,95 @@
 <span class="p">}</span>
 </code></pre>
 </div>
+
 <p>Como resultado, temos:</p>
+
+<p><img src="/assets/pixel.png" alt="Pixel" /></p>
+
+<h3 id="linhas">Linhas</h3>
+
+<p>Para a rasterização de linhas foi criada a função <strong>DrawLine()</strong> que recebe como parâmetros dois objetos da classe Pixel, o pixel inicial e final da linha.</p>
+
+<p>Para realizar o processo de seleção dos pixels entre os pontos final e inicial da linha, foi utilizado o algoritmo de Bresenham. Este foi o maior desafio do trabalho devido a implementação e generalização do algoritmo para todos os 8 quadrantes. Os casos em que as linhas são verticais e horizontais tiveram que ser tratados separadamente.</p>
+
+<p><img src="/assets/octantes.png" alt="Octantes" /></p>
+
+<p>Os casos em que as linhas são verticais e horizontais tiveram que ser tratados separadamente, para o caso da linha estar sobre o eixo Y (dx = 0), temos:</p>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="n">dx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// Line above axis y
+</span>  <span class="p">{</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">inc_y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// positive axis y
+</span>    <span class="p">{</span>
+
+      <span class="k">while</span><span class="p">(</span><span class="n">y</span> <span class="o">!=</span> <span class="n">yf</span><span class="p">)</span>
+      <span class="p">{</span>
+
+        <span class="n">pix</span><span class="o">-&gt;</span><span class="n">set_Y</span><span class="p">(</span><span class="o">++</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">Interpolate</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">all_distances</span><span class="p">);</span>
+        <span class="n">PutPixel</span><span class="p">(</span><span class="n">pix</span><span class="p">);</span>
+
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+    <span class="k">else</span>  <span class="c1">// negative axis y
+</span>    <span class="p">{</span>
+
+      <span class="k">while</span><span class="p">(</span><span class="n">y</span> <span class="o">!=</span> <span class="n">yf</span><span class="p">)</span>
+      <span class="p">{</span>
+
+        <span class="n">pix</span><span class="o">-&gt;</span><span class="n">set_Y</span><span class="p">(</span><span class="o">--</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">Interpolate</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">all_distances</span><span class="p">);</span>
+        <span class="n">PutPixel</span><span class="p">(</span><span class="n">pix</span><span class="p">);</span>
+
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+
+  <span class="p">}</span>
+</code></pre>
+</div>
+<p>Após tratar esses casos, o primeiro passo para a generalização foi identificar se os valores de x e y que compõem a reta crescem ou decrescem.</p>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="n">xf</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">inc_x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">inc_x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>  <span class="c1">// if true then x increases, else decreases
+</span><span class="p">(</span><span class="n">yf</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">inc_y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">inc_y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>  <span class="c1">// if true then y increases, else decreases
+</span></code></pre>
+</div>
+<p>Após identificar o valor das variáveis de controle inc_x e inc_y e sabendo se dx &gt;= dy ou dx &lt; dy, é possível acender os pixels que formarão a reta em qualquer quadrante. Por exemplo, para dx &gt;= dy, temos a seguinte implementação:</p>
+
+<div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="n">dx</span> <span class="o">&gt;=</span> <span class="n">dy</span><span class="p">)</span>
+    <span class="p">{</span>
+
+      <span class="n">d</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">dy</span> <span class="o">-</span> <span class="n">dx</span><span class="p">;</span>
+      <span class="n">incr1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">dy</span><span class="p">;</span>
+      <span class="n">incr2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">dy</span> <span class="o">-</span> <span class="n">dx</span><span class="p">);</span>
+
+      <span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">xf</span><span class="p">)</span>
+      <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">d</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+
+          <span class="n">d</span> <span class="o">+=</span> <span class="n">incr1</span><span class="p">;</span>
+          <span class="n">x</span> <span class="o">+=</span> <span class="n">inc_x</span><span class="p">;</span>
+
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+
+          <span class="n">d</span> <span class="o">+=</span> <span class="n">incr2</span><span class="p">;</span>
+          <span class="n">x</span> <span class="o">+=</span> <span class="n">inc_x</span><span class="p">;</span>
+          <span class="n">y</span> <span class="o">+=</span> <span class="n">inc_y</span><span class="p">;</span>
+
+        <span class="p">}</span>
+
+        <span class="n">pix</span><span class="o">-&gt;</span><span class="n">set_X</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="n">pix</span><span class="o">-&gt;</span><span class="n">set_Y</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">Interpolate</span><span class="p">(</span><span class="n">pix</span><span class="p">,</span> <span class="n">all_distances</span><span class="p">);</span>
+        <span class="n">PutPixel</span><span class="p">(</span><span class="n">pix</span><span class="p">);</span>
+      <span class="p">}</span>
+</code></pre>
+</div>
 
   </div>
 

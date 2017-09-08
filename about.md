@@ -4,15 +4,9 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Meu nome é Elcius Ferreira, tenho 20 anos e sou natural de João Pessoa - PB.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Estou cursando [Engenharia de computação](http://ci.ufpb.br/cursos-graduacao/engenharia-de-computacao/)
+na Universidade Federal da Paraíba (UFPB).
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Desde pequeno sou apaixonado por tecnologia e a Inteligência Artificial em especial vem me fascinando a cada dia. 

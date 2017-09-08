@@ -16,12 +16,12 @@ Primeiramente algumas considerações: Em relação à disposição dos pixels n
 
 Foi utilizado neste trabalho o padrão RGBA, ou seja, cada pixel é formado por 4 componentes de cor: R para vermelho (RED), G para verde (GREEN), B para azul (BLUE) e A para o alfa (ALPHA). Considerando isto, temos o seguinte esquema:
 
-![Color Buffer](/assets/color_buffer.png)
+![Color Buffer](/assets/cg-trabalho-1/color_buffer.png)
 
 
 Portanto, a posição de cada pixel e cada canal de um pixel na memória é dada da seguinte forma:
 
-![Color Buffer2](/assets/color_buffer2.png)
+![Color Buffer2](/assets/cg-trabalho-1/color_buffer2.png)
 
 Consolidados estes conceitos, foi implementada a classe **Pixel** que possui todas as informações de coordenadas e cores relacionadas a ele.
 
@@ -91,7 +91,7 @@ Vale ressaltar que durante todo o processo de rasterização da linha, apenas tr
 
 Para realizar o processo de seleção dos pixels entre os pontos final e inicial da linha, foi utilizado o algoritmo de Bresenham. Este foi o maior desafio do trabalho devido a implementação e generalização do algoritmo para todos os 8 quadrantes do espaço 2D.
 
-![Octantes](/assets/octantes.png)
+![Octantes](/assets/cg-trabalho-1/octantes.png)
 
 Os casos em que as linhas são verticais e horizontais tiveram que ser tratados separadamente. Para o caso da linha estar sobre o eixo Y (dx = 0), temos:
 
@@ -193,8 +193,8 @@ void DrawTriangle(Pixel p1, Pixel p2, Pixel p3)
 
 Em tela, temos:
 
-![Triângulo Verde](/assets/green_triangle.png)
-![Triângulos Verdes](/assets/green_triangles.png)
+![Triângulo Verde](/assets/cg-trabalho-1/green_triangle.png)
+![Triângulos Verdes](/assets/cg-trabalho-1/green_triangles.png)
 
 ### Interpolação Linear de Cores
 
@@ -279,13 +279,13 @@ PutPixel(pix);
 ```
 Como resultado, temos:
 
-![Colored Lines](/assets/colored_lines.png)
-![Colored Art](/assets/colored_art.png)
-![Colored Triangle](/assets/colored_triangle.png)
-![Colored Triangles](/assets/colored_triangles.png)
-![Colored Triangles2](/assets/colored_triangles2.png)
-![Colored All2](/assets/colored_all2.png)
-![Colored All](/assets/colored_all.png)
+![Colored Lines](/assets/cg-trabalho-1/colored_lines.png)
+![Colored Art](/assets/cg-trabalho-1/colored_art.png)
+![Colored Triangle](/assets/cg-trabalho-1/colored_triangle.png)
+![Colored Triangles](/assets/cg-trabalho-1/colored_triangles.png)
+![Colored Triangles2](/assets/cg-trabalho-1/colored_triangles2.png)
+![Colored All2](/assets/cg-trabalho-1/colored_all2.png)
+![Colored All](/assets/cg-trabalho-1/colored_all.png)
 
 ### Considerações Finais
 
@@ -297,7 +297,7 @@ Como melhoria seria interessante o preenchimento por completo dos triângulos in
 
 ### Bibliografia
 
-* [The Bresenham Line-Drawing Algorithm, por Colin Flanagan](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
+* [The Bresenham Line-Drawing Algorithm, por Colin Flanagan](https://www.cs.helsinki.fi/group/goa/mallinnus/lines/bresenh.html)
 * [Bresenham's line algorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
 * [Tabela de cores](http://www.flextool.com.br/tabela_cores.html)
 * Notas de aula do Prof. Christian

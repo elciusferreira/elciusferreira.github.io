@@ -171,8 +171,8 @@ if(dx >= dy)
 ```
 Como resultado, temos:
 
-![Red Line](/assets/red_line.png)
-![Red Lines](/assets/red_lines.png)
+![Red Line](/assets/cg-trabalho-1/red_line.png)
+![Red Lines](/assets/cg-trabalho-1/red_lines.png)
 
 ### Triângulos
 

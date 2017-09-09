@@ -4,6 +4,9 @@ title:  "Introdução à Computação Gráfica - Rasterização de Pontos e Linh
 date:   2017-09-04 22:44:03 -0300
 tags: [computação gráfica, rasterização]
 ---
+
+![Initial Image](/assets/img/cg-trabalho-1/initial_img.png)
+
 Este post trata-se de um relatório sobre o primeiro trabalho da disciplina de Introdução à Computação Gráfica, ministrada pelo Prof. Dr. [Christian Azambuja Pagot](http://lattes.cnpq.br/4353928200012173).
 
 O trabalho consiste nas implementações de algoritmos para rasterização de primitivas na liguagem C/C++ em conjunto com as bibliotecas GLUT e OpenGL. Como os sistemas operacionais não permitem o acesso direto na memória de vídeo, será utilizado um framework, desenvolvido pelo professor, que tem como objetivo simular a memória de vídeo.

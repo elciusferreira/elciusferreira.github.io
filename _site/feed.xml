@@ -1,4 +1,264 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-09-08T21:06:30-03:00</updated><id>/</id><title type="html">Elcius Ferreira</title><subtitle>Website with academics and personal projects.</subtitle><entry><title type="html">Introdução à Computação Gráfica - Rasterização de Pontos e Linhas</title><link href="/cg-trabalho-1/" rel="alternate" type="text/html" title="Introdução à Computação Gráfica - Rasterização de Pontos e Linhas" /><published>2017-09-04T22:44:03-03:00</published><updated>2017-09-04T22:44:03-03:00</updated><id>/cg-trabalho-1</id><content type="html" xml:base="/cg-trabalho-1/">&lt;p&gt;Este post trata-se de um relatório sobre o primeiro trabalho da disciplina de Introdução à Computação Gráfica, ministrada pelo Prof. Dr. &lt;a href=&quot;http://lattes.cnpq.br/4353928200012173&quot;&gt;Christian Azambuja Pagot&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-09-09T00:22:50-03:00</updated><id>/</id><title type="html">Elcius Ferreira</title><subtitle>Website with academics and personal projects.</subtitle><entry><title type="html">Inteligência artificial - Classificando casos de câncer como benigno ou maligno</title><link href="/cancer-classifier-ai/" rel="alternate" type="text/html" title="Inteligência artificial - Classificando casos de câncer como benigno ou maligno" /><published>2017-09-08T22:35:03-03:00</published><updated>2017-09-08T22:35:03-03:00</updated><id>/cancer-classifier-ai</id><content type="html" xml:base="/cancer-classifier-ai/">&lt;p&gt;&lt;img src=&quot;/assets/img/cancer-classifier-ai/initial_img.jpg&quot; alt=&quot;Initial Img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Na graduação me deparei com a disciplina de Inteligência Artificial e para desenvolver o projeto final da disciplina fui procurar por data sets. Logo encontrei um site com uma base de dados incrível e bem variada, o &lt;a href=&quot;https://www.kaggle.com/&quot;&gt;Kaggle&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Navegando achei o &lt;a href=&quot;https://www.kaggle.com/uciml/breast-cancer-wisconsin-data&quot;&gt;Breast Cancer Wisconsin (Diagnostic) Data Set&lt;/a&gt; e decidi aplicar meus conhecimentos adquiridos na disciplina nele.&lt;/p&gt;
+
+&lt;h3 id=&quot;o-data-set&quot;&gt;O Data Set&lt;/h3&gt;
+
+&lt;p&gt;A base de dados possui diversas características físicas de 569 amostras de câncer. São elas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Raio (média das distâncias do centro à pontos no perímetro)&lt;/li&gt;
+  &lt;li&gt;Textura (desvio padrão de valores de escala de cinza)&lt;/li&gt;
+  &lt;li&gt;Perímetro&lt;/li&gt;
+  &lt;li&gt;Área&lt;/li&gt;
+  &lt;li&gt;Suavidade (variação local em comprimentos de raio)&lt;/li&gt;
+  &lt;li&gt;Solidez (perémetro^2 / área - 1.0)&lt;/li&gt;
+  &lt;li&gt;Concavidade (severidade das porções côncavas do contorno)&lt;/li&gt;
+  &lt;li&gt;Pontos côncavos (número de porções côncavas do contorno)&lt;/li&gt;
+  &lt;li&gt;Simetria&lt;/li&gt;
+  &lt;li&gt;Dimensão fractal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para cada um desses atributos a média, o erro padrão e o pior caso foram estabelecidos através de imagens, resultando no total de 30 atributos. Além
+destes ainda estão presentes o ID do caso e o diagnóstico dado (benigno ou maligno).&lt;/p&gt;
+
+&lt;h3 id=&quot;o-problema&quot;&gt;O Problema&lt;/h3&gt;
+
+&lt;p&gt;Sabe-se que por meio dos atributos físicos dos tumores é possível realizar previsões sobre classificá-lo como maligno ou benigno. Para tal é necessário que se tenha domínio sobre o tema e conhecimento de casos prévios. Sabendo disso, a problemática está situada nas seguintes perguntas: É possível obter boas tentativas de classificação de tumores, como benignos ou malignos, a partir de suas características físicas e de
+forma rápida? Como a tecnologia pode ajudar nisso?&lt;/p&gt;
+
+&lt;h3 id=&quot;objetivos&quot;&gt;Objetivos&lt;/h3&gt;
+
+&lt;h4 id=&quot;objetivo-geral&quot;&gt;Objetivo Geral&lt;/h4&gt;
+
+&lt;p&gt;Dada a problemática, o objetivo é trazer a tecnologia para o problema em questão como forma de solução, e utilizar conceitos de inteligência artificial de forma que a classificação possa ser feita com boas taxas de acerto. Estabelecidas essas taxas, compara-se os resultados para determinar o melhor método.&lt;/p&gt;
+
+&lt;h4 id=&quot;objetivos-específicos&quot;&gt;Objetivos Específicos&lt;/h4&gt;
+
+&lt;p&gt;Inicialmente os dados presentes no dataset serão analisados e preparados para que os métodos de aprendizado de máquina Regressão Logística, Árvore de Decisão, KNN, Random Forest e SVM sejam usados.&lt;/p&gt;
+
+&lt;h3 id=&quot;visualização-e-tratamento-dos-dados&quot;&gt;Visualização e Tratamento dos Dados&lt;/h3&gt;
+
+&lt;p&gt;De início, a visualização e o tratamento foram feitos. Constatou-se que a tabela possui 569 linhas, 33 colunas e os dados não se encontram muito desbalanceados, ou seja, a quantidade de casos diagnosticados como benignos não é drasticamente desigual aos diagnosticados como malignos. O que podemos confirmar abaixo, sendo 0 para casos benignos e 1 para malignos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/cancer-classifier-ai/img1.png&quot; alt=&quot;Img1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para manipulação e visualização dos dados foi utilizada a linguagem Python 3.6.1 em conjunto com o pacote NumPy e com o Pandas. Como exemplo de visualização de alguns atributos, temos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/cancer-classifier-ai/img2.png&quot; alt=&quot;Img2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Temos ainda em forma de visualização de algumas estatísticas:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/cancer-classifier-ai/img3.png&quot; alt=&quot;Img3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Portanto, como pré-processamento foi feita a visualização dos dados, alterou-se a tabela original retirando o ID dos casos e um atributo chamado Unnamed:32, pois o mesmo não possuía valores em todas as instâncias, ou seja, era uma coluna vazia.&lt;/p&gt;
+
+&lt;h3 id=&quot;estudo-dos-atributos&quot;&gt;Estudo dos Atributos&lt;/h3&gt;
+
+&lt;p&gt;Os atributos de média foram selecionados para serem analisados e utilizamos durante todo o projeto. Nesta etapa foi feita o plot de um scatter plot e de um histograma para a partir deles fazer a verificação dos atributos mais interessantes ao problema. Scatter plot (para melhor visualização basta aproximar a imagem):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/cancer-classifier-ai/img4.png&quot; alt=&quot;Img4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Histograma (para melhor visualização basta aproximar a imagem):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/cancer-classifier-ai/img5.png&quot; alt=&quot;Img5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A partir dos gráficos foram feitas as seguintes observações:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Os atributos &lt;em&gt;radius_mean&lt;/em&gt;, &lt;em&gt;perimeter_mean&lt;/em&gt;, &lt;em&gt;area_mean&lt;/em&gt;, &lt;em&gt;compactness_mean&lt;/em&gt;, &lt;em&gt;concavity_mean&lt;/em&gt; e &lt;em&gt;concave_points_mean&lt;/em&gt; podem ser usados para classificação do tipo de câncer. Valores maiores desses parâmetros tendem a mostrar uma correlação ao tipo maligno.&lt;/li&gt;
+  &lt;li&gt;Os valores dos atributos texture_mean, smoothness_mean, symmetry_mean e fractal_dimension_mean ​ não demonstram uma preferência particular de um diagnóstico em relação ao outro​.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Baseando-se nessas observações, podemos assumir que a classificação do tumor depende dos seguintes atributos/variáveis:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;predictor_var&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'radius_mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'perimeter_mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'area_mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'compactness_mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'concavity_mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'concave points_mean'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;outcome_var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'diagnosis'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predictor_var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# input data&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;diagnosis&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# output data&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;modelo-de-classificação&quot;&gt;Modelo de Classificação&lt;/h3&gt;
+
+&lt;p&gt;Um modelo de classificação genérico foi implementado para que todos os métodos de aprendizado de máquina usem-o. Para utilizar eles foi usado o pacote sklearn e para encontrar a melhor combinação de parâmetros que
+resulte no melhor desempenho para o problema, foi usada a função GridSearchCV, do mesmo pacote, que ainda utiliza cross-validation internamente.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.model_selection&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GridSearchCV&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Classification_model_gridsearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;start_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# busca pela combinação de parâmetros que possui maior acurácia utilizando cross-validation&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;clf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GridSearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;accuracy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;clf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# ajuste do modelo com os parâmetros encontrados&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;method_score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_score_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;processing_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start_time&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Melhor combinação de parâmetros encontrada:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_params_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Cross-validation score proporcionada por essa combinação de parâmetros: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{0:.3f}&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Processing time: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s seconds&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;processing_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method_score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;processing_time&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Parâmetros da função Classification_model_gridserachCV():&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;model = método de classificação a ser testado.&lt;/li&gt;
+  &lt;li&gt;param_grid = dicionário com todos os valores de parâmetros a serem testados e para que a partir deles a melhor combinação seja obtida.&lt;/li&gt;
+  &lt;li&gt;data_X = dados de entrada.&lt;/li&gt;
+  &lt;li&gt;data_y = resultados de saída esperados para o modelo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;O ajuste dos parâmetros é feito pela função fit(), a combinação que gerou melhor desempenho de cross-validation é exibida, a acurácia é medida e também exibida.&lt;/p&gt;
+
+&lt;p&gt;Parâmetros da função GridSearch_model_gridsearchCV():&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;model = método/modelo.&lt;/li&gt;
+  &lt;li&gt;param_grid = dicionário de parâmetros.&lt;/li&gt;
+  &lt;li&gt;cv = cross-validation com divisão dos dados em 10 partes.&lt;/li&gt;
+  &lt;li&gt;scoring = “accuracy”: pontuação baseada na acurácia.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;regressão-logística&quot;&gt;Regressão Logística&lt;/h3&gt;
+
+&lt;p&gt;Usa-se a função &lt;em&gt;LogisticRegression()&lt;/em&gt; do pacote sklearn no modelo. O conjunto de parâmetros é constituído por alguns valores do parâmetro C para
+serem testados e o que proporciona o melhor resultado será encontrado. Por fim o modelo de classificação genérico é usado.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.linear_model&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LogisticRegression&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# valores de parâmetros a serem testados&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LogisticRegression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Classification_model_gridsearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;Árvore-de-decisão&quot;&gt;Árvore de Decisão&lt;/h3&gt;
+
+&lt;p&gt;Para utilizar o modelo de árvore de decisão foi usada a função &lt;em&gt;DecisionTreeClassifier()&lt;/em&gt; e foi estabelecido um dicionário de parâmetros para ela para que a melhor combinação dos mesmos seja encontrada. O conceito do dicionário foi utilizado posteriormente também nos demais métodos.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.tree&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeClassifier&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'max_features'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'auto'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sqrt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'log2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# valores de parâmetros a serem testados&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;'min_samples_split'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;'min_samples_leaf'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeClassifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Classification_model_gridsearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;knn&quot;&gt;KNN&lt;/h3&gt;
+
+&lt;p&gt;Para utilizar o modelo knn foi usada a função &lt;em&gt;KNeighborsClassifier()&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.neighbors&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KNeighborsClassifier&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KNeighborsClassifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;k_range&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# valores de parâmetros a serem testados&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;leaf_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;weight_options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'uniform'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'distance'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'n_neighbors'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'leaf_size'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leaf_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'weights'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Classification_model_gridsearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;random-forest&quot;&gt;Random Forest&lt;/h3&gt;
+
+&lt;p&gt;Para utilizar o modelo random forest foi usada a função &lt;em&gt;RandomForestClassifier()&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.ensemble&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RandomForestClassifier&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RandomForestClassifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    &lt;span class=&quot;s&quot;&gt;&quot;n_estimators&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# valores de parâmetros a serem testados&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&quot;max_depth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&quot;max_features&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&quot;min_samples_split&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&quot;min_samples_leaf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&quot;criterion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;gini&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;entropy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Classification_model_gridsearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;svm&quot;&gt;SVM&lt;/h3&gt;
+
+&lt;p&gt;Para utilizar o modelo svm foi usada a função SVC().&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;svm&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;svm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SVC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# valores de parâmetros a serem testados&lt;/span&gt;
+               &lt;span class=&quot;s&quot;&gt;'kernel'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'linear'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+               &lt;span class=&quot;s&quot;&gt;'gamma'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+               &lt;span class=&quot;s&quot;&gt;'kernel'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'rbf'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Classification_model_gridsearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;análise-de-resultados&quot;&gt;Análise de Resultados&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Método&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Acurácia(%)&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Tempo (s)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Regressão Logística&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;90.86&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.368&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Árvores de Decisão&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;92.09&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8.015&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;KNN&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;89.45&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;108.472&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Random Forest&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;92.44&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;291.471&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;SVM&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;90.86&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;286.690&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Um fator que é determinante para o tempo de treinamento neste caso é a possibilidade de combinações de parâmetros testadas, pois todas elas terão que ser usadas para treinamento e posteriormente teste do modelo para então calcular a porcentagem de acerto.&lt;/p&gt;
+
+&lt;p&gt;Vemos que três algoritmos que se destacaram para a classificação das instâncias do problema foram Regressão, Árvore de Decisão e Random Forest.&lt;/p&gt;
+
+&lt;p&gt;A Regressão Logística obteve o melhor tempo de treinamento, devido à pouca quantidade combinações de parâmetros e foi o vencedor no quesito velocidade de treinamento. Usando Árvore de Decisão temos o segundo melhor tempo com uma porcentagem de acerto muito próxima ao melhor algoritmo desse quesito, que foi o Random Forest, sendo portanto um algoritmo de ótimo custo benefício para o problema. E o Random Forest foi o vencedor no quesito acerto ficando bem atrás de seus concorrentes em relação ao tempo necessário de processamento.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h3&gt;
+
+&lt;p&gt;Neste projeto foram utilizadas diferentes abordagens para classificar casos de câncer de mama como benigno e maligno realizando um estudo dos atributos presentes no dataset. Algoritmos diferentes foram usados, tais como, Regressão Logística, Árvore de Decisão, KNN, Random Forest e SVM, respeitando as particularidades dos parâmetros de cada um deles.&lt;/p&gt;
+
+&lt;p&gt;Vale ressaltar que os desempenhos obtidos por eles são considerados bons ou ótimos e pode-se destacar a Regressão Logística, Árvore de Decisão e Random Forest pelos seus resultados. Esses em especial mostraram que podem estar à disposição de pessoas que possuem o desejo de unir o que a tecnologia proporciona e a necessidade de entender melhor os problemas que vivemos, assim como o problema de classificação correta de um tumor.&lt;/p&gt;</content><category term="inteligência artificial" /><category term="câncer" /><summary type="html"></summary></entry><entry><title type="html">Introdução à Computação Gráfica - Rasterização de Pontos e Linhas</title><link href="/cg-trabalho-1/" rel="alternate" type="text/html" title="Introdução à Computação Gráfica - Rasterização de Pontos e Linhas" /><published>2017-09-04T22:44:03-03:00</published><updated>2017-09-04T22:44:03-03:00</updated><id>/cg-trabalho-1</id><content type="html" xml:base="/cg-trabalho-1/">&lt;p&gt;&lt;img src=&quot;/assets/img/cg-trabalho-1/initial_img.png&quot; alt=&quot;Initial Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Este post trata-se de um relatório sobre o primeiro trabalho da disciplina de Introdução à Computação Gráfica, ministrada pelo Prof. Dr. &lt;a href=&quot;http://lattes.cnpq.br/4353928200012173&quot;&gt;Christian Azambuja Pagot&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;O trabalho consiste nas implementações de algoritmos para rasterização de primitivas na liguagem C/C++ em conjunto com as bibliotecas GLUT e OpenGL. Como os sistemas operacionais não permitem o acesso direto na memória de vídeo, será utilizado um framework, desenvolvido pelo professor, que tem como objetivo simular a memória de vídeo.&lt;/p&gt;
 
@@ -292,4 +552,8 @@
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm&quot;&gt;Bresenham’s line algorithm&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.flextool.com.br/tabela_cores.html&quot;&gt;Tabela de cores&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Notas de aula do Prof. Christian&lt;/li&gt;
-&lt;/ul&gt;</content><category term="computação gráfica" /><category term="rasterização" /><summary type="html">Este post trata-se de um relatório sobre o primeiro trabalho da disciplina de Introdução à Computação Gráfica, ministrada pelo Prof. Dr. Christian Azambuja Pagot.</summary></entry></feed>
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;repositório-no-github&quot;&gt;Repositório no Github&lt;/h3&gt;
+
+&lt;p&gt;Acesse o repositório no Github &lt;a href=&quot;https://github.com/elciusferreira/cg-rasterization&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;</content><category term="computação gráfica" /><category term="rasterização" /><summary type="html"></summary></entry></feed>

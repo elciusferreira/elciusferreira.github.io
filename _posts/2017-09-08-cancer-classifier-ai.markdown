@@ -227,3 +227,7 @@ A Regressão Logística obteve o melhor tempo de treinamento, devido à pouca qu
 Neste projeto foram utilizadas diferentes abordagens para classificar casos de câncer de mama como benigno e maligno realizando um estudo dos atributos presentes no dataset. Algoritmos diferentes foram usados, tais como, Regressão Logística, Árvore de Decisão, KNN, Random Forest e SVM, respeitando as particularidades dos parâmetros de cada um deles.
 
 Vale ressaltar que os desempenhos obtidos por eles são considerados bons ou ótimos e pode-se destacar a Regressão Logística, Árvore de Decisão e Random Forest pelos seus resultados. Esses em especial mostraram que podem estar à disposição de pessoas que possuem o desejo de unir o que a tecnologia proporciona e a necessidade de entender melhor os problemas que vivemos, assim como o problema de classificação correta de um tumor.
+
+### Repositório do Github
+
+Acesse o repositório no Github contendo toda a implementação e um relatório mais detalhado [aqui](https://github.com/elciusferreira/cancer-classifier-AI).

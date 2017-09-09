@@ -3,9 +3,9 @@ layout: post
 title:  "Introdução à Computação Gráfica - Rasterização de Pontos e Linhas"
 date:   2017-09-04 22:44:03 -0300
 tags: [computação gráfica, rasterização]
+feature: assets/img/cg-trabalho-1/initial_img.png
 ---
 
-![Initial Image](/assets/img/cg-trabalho-1/initial_img.png)
 
 Este post trata-se de um relatório sobre o primeiro trabalho da disciplina de Introdução à Computação Gráfica, ministrada pelo Prof. Dr. [Christian Azambuja Pagot](http://lattes.cnpq.br/4353928200012173).
 

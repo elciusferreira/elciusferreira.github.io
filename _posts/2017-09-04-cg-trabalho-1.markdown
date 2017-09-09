@@ -288,6 +288,8 @@ Como resultado, temos:
 ![Colored Triangles2](/assets/img/cg-trabalho-1/colored_triangles2.png)
 ![Colored All2](/assets/img/cg-trabalho-1/colored_all2.png)
 ![Colored All](/assets/img/cg-trabalho-1/colored_all.png)
+![initial Img](/assets/img/cg-trabalho-1/initial_img.png)
+
 
 ### Considerações Finais
 

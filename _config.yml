@@ -1,25 +1,76 @@
-title: Elcius Ferreira
-email: elciusfb2@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Bem vindo ao meu blog pessoal, aqui estarei realizando alguns posts de projetos acadêmicos e pessoais!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  elciusferreira
+# Site
+title:              Elcius Ferreira
+bio:                'Personal website.'
+description:        "Website with academics and personal projects."
+reading_time:       true
+words_per_minute:   200
+logo:               'assets/img/logo.png'
+background:         'assets/img/placeholder-big.jpg'
+tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
+#locale:             en_US
+#url:                https://taylantatli.github.io/Moon
 
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
+# Comments
+disqus_shortname:   taylantatli
+
+# Social
+# if you don't have any of social below, comment the line.
+#google:
+  #plus:            #username
+  #analytics:
+  #verify:
+  #ad-client:
+  #ad-slot:
+#bing-verify:
+#email:
+twitter:            elciusferreira
+facebook:           elciusferreira
+github-url:         elciusferreira
+#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
+linkedin:          elciusferreira
+#xing:              username
+instagram:          elciusferreira_
+#lastfm:            username
+#tumblr:            username
+#medium:            '@username'
+#pinterest:         username
+#foursquare:        username
+#steam:              username
+#dribbble:          username
+#youtube:           username
+#youtube-channel:   channel
+#soundcloud:        username
+#weibo:             username
+#flickr:            username
+#codepen:           username
+#keybase:           username
+#xmpp:              username@server.com
+#hackernews:        username
+
+# Gems
+gems:
+  - jekyll-mentions
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+jekyll-mentions:
+    base_url: https://github.com
+
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

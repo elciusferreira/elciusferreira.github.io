@@ -7,7 +7,7 @@ feature: /assets/img/cancer-classifier-ai/initial_img.jpg
 ---
 
 
-Na graduação me deparei com a disciplina de Inteligência Artificial e para desenvolver o projeto final da disciplina fui procurar por data sets. Logo encontrei um site com uma base de dados incrível e bem variada, o [Kaggle](https://www.kaggle.com/).
+Na graduação me deparei com a disciplina de Inteligência Artificial e para desenvolver o projeto final dela fui procurar por data sets. Logo encontrei um site com uma base de dados incrível e bem variada, o [Kaggle](https://www.kaggle.com/).
 
 Navegando achei o [Breast Cancer Wisconsin (Diagnostic) Data Set](https://www.kaggle.com/uciml/breast-cancer-wisconsin-data) e decidi aplicar meus conhecimentos adquiridos na disciplina nele.   
 

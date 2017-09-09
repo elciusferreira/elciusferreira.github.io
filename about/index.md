@@ -11,4 +11,4 @@ na Universidade Federal da Paraíba (UFPB).
 
 Desde pequeno sou apaixonado por tecnologia e a Inteligência Artificial em especial vem me fascinando a cada dia.
 
-Neste website estarei realizando posts de alguns projetos acadêmicos e pessoais.
+Neste Website estarei realizando posts de alguns projetos acadêmicos e pessoais.

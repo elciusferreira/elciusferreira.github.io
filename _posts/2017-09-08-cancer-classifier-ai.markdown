@@ -3,9 +3,9 @@ layout: post
 title:  "Inteligência artificial - Classificando casos de câncer como benigno ou maligno"
 date:   2017-09-08 22:35:03 -0300
 tags: [inteligência artificial, câncer]
+feature: /assets/img/cancer-classifier-ai/initial_img.jpg
 ---
 
-![Initial Img](/assets/img/cancer-classifier-ai/initial_img.jpg)
 
 Na graduação me deparei com a disciplina de Inteligência Artificial e para desenvolver o projeto final da disciplina fui procurar por data sets. Logo encontrei um site com uma base de dados incrível e bem variada, o [Kaggle](https://www.kaggle.com/).
 

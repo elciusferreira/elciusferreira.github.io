@@ -303,3 +303,7 @@ Como melhoria seria interessante o preenchimento por completo dos triângulos in
 * [Bresenham's line algorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
 * [Tabela de cores](http://www.flextool.com.br/tabela_cores.html)
 * Notas de aula do Prof. Christian
+
+### Repositório no Github
+
+Acesse o repositório no Github [aqui](https://github.com/elciusferreira/cg-rasterization).

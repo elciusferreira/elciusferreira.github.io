@@ -20,7 +20,7 @@ A base de dados possui diversas características físicas de 569 amostras de câ
 * Perímetro
 * Área
 * Suavidade (variação local em comprimentos de raio)
-* Solidez (perémetro^2 / área - 1.0)
+* Solidez (perímetro^2 / área - 1.0)
 * Concavidade (severidade das porções côncavas do contorno)
 * Pontos côncavos (número de porções côncavas do contorno)
 * Simetria

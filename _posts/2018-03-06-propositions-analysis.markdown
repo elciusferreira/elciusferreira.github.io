@@ -40,6 +40,170 @@ Antes de apresentar o estudo de fato, é interessante informar que todo o códig
 ## Todo o código documentado se encontra em um repositório no meu Github neste [link](https://github.com/elciusferreira/propositions-analysis).
 
 
+# Resultados da análise das proposições entre 2014 e 2016
+
+Verificando o conteúdo do arquivo que, segundo o portal da Câmara, corresponde ao intervalo de 2014 a 2016, temos que existem 6881 proposições.
+
+### Proposições x Estados
+
+![14_16_Estados](/assets/img/propositions-analysis/img25.png)
+
+Ranking dos 6 estados com mais proposições e as respectivas quantidades:
+
+|     Estado          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| SP                  | 897                |
+| RJ                  | 688                |
+| PR                  | 445                |
+| RS                  | 436                |
+| MG                  | 415                |
+| PB                  | 384                |
+
+Em 639 proposições não há informação da UF em que  proposição se origina.
+
+### Proposições x Gênero
+
+![14_16_Genero](/assets/img/propositions-analysis/img26.png)
+
+|     Gênero         |  Qtd. Proposições  |
+| :------------------|:------------------:|
+| MASCULINO          | 5712               |
+| FEMININO           | 550                |
+
+Em 619 proposições não há informação do gênero do(a) parlamentar que propôs.
+
+### Proposições x Temas
+
+Ranking dos 6 temas mais frequentes:
+
+|     Tema            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| DIREITO PENAL E PROCESSUAL PENAL | 441   |
+| ADMINISTRAÇÃO PÚBLICA | 415              |
+| TRIBUTAÇÃO          | 336                |
+| DESENVOLVIMENTO URBANO E TRÂNSITO| 310   |
+| TRABALHO E EMPREGO  | 289                |
+| SAÚDE               | 287                |
+| EDUCAÇÃO            |  278            |
+
+### Proposições x Tipo do Autor
+
+Ranking dos tipos de autores do mais frequente ao menos frequente:
+
+|     Tipo do Autor          |  Qtd. Proposições  |
+| :------------------------- |:------------------:|
+| DEPUTADO                   | 6262               |
+| ÓRGÃO DO PODER LEGISLATIVO | 214                |
+| COMISSÃO PERMANENTE        | 189                |
+| ÓRGÃO DO PODER EXECUTIVO   | 106                |
+| COMISSÃO PARLAMENTAR DE INQUÉRITO  | 33         |
+| ÓRGÃO DO PODER JUDICIÁRIO          | 31         |
+| COMISSÃO DIRETORA          |  16                |
+| COMISSÃO MISTA PERMANENTE  | 12                 |
+| COMISSÃO ESPECIAL          | 10                 |
+| COMISSÃO EXTERNA           | 4                  |
+| SOCIEDADE CIVIL            | 2                  |
+| MPU - MINISTÉRIO PÚBLICO DA UNIÃO | 1           |
+| DPU - DEFENSORIA PÚBLICA DA UNIÃO | 1           |
+
+### Proposições x Ano
+
+![14_16_Ano](/assets/img/propositions-analysis/img27.png)
+
+Ranking:
+
+|     Ano             |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| 2015                | 5107               |
+| 2016                | 1764               |
+| 2014                | 3                  |
+
+
+### Proposições x Região
+
+![14_16_Regiao](/assets/img/propositions-analysis/img28.png)
+
+
+Ranking:
+
+|     Região          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| SUDESTE             | 2185               |
+| NORDESTE            | 1642               |
+| SUL                 | 1065               |
+| CENTRO-OESTE        | 775                |
+| NORTE               | 575                |
+
+Em 639 proposições não há informação da região em que  proposição se origina.
+
+### Proposições x Tipos
+
+![14_16_Tipos](/assets/img/propositions-analysis/img29.png)
+
+Ranking:
+
+|     Tipo            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PL                  | 5692               |
+| PDC                 | 421                |
+| PLP                 | 297                |
+| PEC                 | 250                |
+| PRC                 | 157                |
+| MPV                 | 64                 |
+
+
+Legenda:
+
+* PL = Projetos de Lei
+* PDC = Projetos de Decreto Legislativo da Câmara
+* PLP = Projetos de Lei Complementar
+* PEC = Projetos de Emenda à Constituição
+* MPV = Medidas Provisórias (MPV)
+* PRC = Projetos de Resolução da Câmara  
+
+### Proposições x Partidos Políticos
+
+![14_16_Partidos](/assets/img/propositions-analysis/img30.png)
+
+
+Ranking dos 6 partidos com mais proposições e as respectivas quantidades:
+
+|     Partido         |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PMDB                  | 910               |
+| PSD                | 630               |
+| PP                | 548                |
+| PSDB                 | 520                |
+| PR                 | 416                |
+| PT                 | 361                |
+
+Em 639 proposições não há informação do partido associado.
+
+### Proposições x Nome do Parlamentar
+
+
+Ranking dos 10 deputados com mais proposições:
+
+|     Nome do Parlamentar         |  Qtd. Proposições  |
+| :-------------------------------|:------------------:|
+| RÔMULO GOUVEIA                   | 182                |
+| MARCELO BELINATI                     | 172                |
+| ALBERTO FRAGA                  | 145                |
+| VENEZIANO VITAL DO RÊGO           | 115                |
+| CARLOS BEZERRA                | 115                |
+| POMPEO DE MATTOS                | 114                 |
+| GOULART                   | 95                 |
+| CARLOS HENRIQUE GAGUIM                    | 81                 |
+| CABO SABINO                    | 71                 |
+| CARLOS MANATO                  | 57                 |
+
+
+
+Média de proposições por candidato: _12.33 proposições_.
+
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código usado para processar os dados de 2014 a 2016 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes14-16.ipynb).  
+
+
 # Resultados da análise das proposições entre 2010 e 2014
 
 Verificando o conteúdo do arquivo que, segundo o portal da Câmara, corresponde ao intervalo de 2010 a 2014, temos que existem 11307 proposições.

@@ -37,10 +37,177 @@ Foram examinadas as relações entre:
 ## Informações técnicas
 Antes de apresentar o estudo de fato, é interessante informar que todo o código implementado para tal análise se deu na linguagem de programação [Python](https://www.python.org/). Algumas bibliotecas para plotagem de gráficos foram usadas, tais como [Matplotlib](https://matplotlib.org/) e [Seaborn](https://seaborn.pydata.org/). Foi utilizada ainda [Pandas](http://pandas.pydata.org/), considerada a melhor biblioteca Python para análise de dados.
 
-### Todo o código documentado se encontra em um repositório no meu Github neste [link](https://github.com/elciusferreira/propositions-analysis).
+## Todo o código documentado se encontra em um repositório no meu Github neste [link](https://github.com/elciusferreira/propositions-analysis).
 
 
-## Resultados da análise das proposições entre 2006 e 2010
+# Resultados da análise das proposições entre 2010 e 2014
+
+Verificando o conteúdo do arquivo que, segundo o portal da Câmara, corresponde ao intervalo de 2010 a 2014, temos que existem 11307 proposições.
+
+### Proposições x Estados
+
+![10_14_Estados](/assets/img/propositions-analysis/img19.png)
+
+Ranking dos 6 estados com mais proposições e as respectivas quantidades:
+
+|     Estado          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| SP                  | 1360               |
+| RJ                  | 864                |
+| MG                  | 798                |
+| PB                  | 548                |
+| RS                  | 537                |
+| SC                  | 476                |
+
+Em 2448 proposições não há informação da UF em que  proposição se origina.
+
+### Proposições x Gênero
+
+![10_14_Genero](/assets/img/propositions-analysis/img20.png)
+
+|     Gênero         |  Qtd. Proposições  |
+| :------------------|:------------------:|
+| MASCULINO          | 7922               |
+| FEMININO           | 939                |
+
+Em 2446 proposições não há informação do gênero do(a) parlamentar que propôs.
+
+### Proposições x Temas
+
+Ranking dos 6 temas mais frequentes:
+
+|     Tema            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| COMUNICAÇÕES        | 1477               |
+| TRIBUTAÇÃO          | 657                |
+| TRABALHO E EMPREGO  | 649                |
+| ADMINISTRAÇÃO PÚBLICA| 635               |
+| HOMENAGENS E DATAS COMEMORATIVAS| 487    |
+| EDUCAÇÃO            | 480                |
+| DIREITOS HUMANOS, MINORIAS E CIDADANIA   |  480            |
+
+### Proposições x Tipo do Autor
+
+Ranking dos tipos de autores do mais frequente ao menos frequente:
+
+|     Tipo do Autor          |  Qtd. Proposições  |
+| :------------------------- |:------------------:|
+| DEPUTADO                   | 8861               |
+| COMISSÃO PERMANENTE        | 1487               |
+| ÓRGÃO DO PODER LEGISLATIVO | 524                |
+| ÓRGÃO DO PODER EXECUTIVO   | 229                |
+| ÓRGÃO DO PODER JUDICIÁRIO  | 86                 |
+| COMISSÃO DIRETORA          |  39                |
+| COMISSÃO MISTA PERMANENTE  |  17                |
+| COMISSÃO ESPECIAL          | 15                 |
+| MPU - MINISTÉRIO PÚBLICO DA UNIÃO  | 15         |
+| COMISSÃO PARLAMENTAR DE INQUÉRITO  | 14         |
+| COMISSÃO PARLAMENTAR MISTA DE INQUÉRITO | 6     |
+| COMISSÃO EXTERNA           | 6                  |
+| DPU - DEFENSORIA PÚBLICA DA UNIÃO | 4           |
+| COMISSÃO MISTA ESPECIAL    | 3                  |
+| COMISSÃO PERMANENTE DO SENADO FEDERAL| 1        |
+
+### Proposições x Ano
+
+![10_14_Ano](/assets/img/propositions-analysis/img21.png)
+
+Ranking:
+
+|     Ano             |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| 2011                | 4011               |
+| 2013                | 3115               |
+| 2012                | 2433               |
+| 2014                | 1744               |
+
+
+### Proposições x Região
+
+![10_14_Regiao](/assets/img/propositions-analysis/img22.png)
+
+
+Ranking:
+
+|     Região          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| SUDESTE             | 3297               |
+| NORDESTE            | 2355               |
+| SUL                 | 1398               |
+| CENTRO-OESTE        | 1126               |
+| NORTE               | 683                |
+
+Em 3297 proposições não há informação da região em que  proposição se origina.
+
+### Proposições x Tipos
+
+![10_14_Tipos](/assets/img/propositions-analysis/img23.png)
+
+Ranking:
+
+|     Tipo            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PL                  | 8327               |
+| PDC                 | 1667               |
+| PLP                 | 455                |
+| PEC                 | 451                |
+| PRC                 | 268                |
+| MPV                 | 139                |
+
+
+Legenda:
+
+* PL = Projetos de Lei
+* PDC = Projetos de Decreto Legislativo da Câmara
+* PLP = Projetos de Lei Complementar
+* PEC = Projetos de Emenda à Constituição
+* MPV = Medidas Provisórias (MPV)
+* PRC = Projetos de Resolução da Câmara  
+
+### Proposições x Partidos Políticos
+
+![10_14_Partidos](/assets/img/propositions-analysis/img24.png)
+
+
+Ranking dos 6 partidos com mais proposições e as respectivas quantidades:
+
+|     Partido         |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PT                  | 1257               |
+| PMDB                | 1182               |
+| PSDB                | 948                |
+| PSD                 | 743                |
+| DEM                 | 646                |
+| PSB                 | 588                |
+
+Em 2448 proposições não há informação do partido associado.
+
+### Proposições x Nome do Parlamentar
+
+
+Ranking dos 10 deputados com mais proposições:
+
+|     Nome do Parlamentar         |  Qtd. Proposições  |
+| :-------------------------------|:------------------:|
+| WELITON PRADO                   | 172                |
+| MAJOR FÁBIO                     | 169                |
+| CARLOS BEZERRA                  | 159                |
+| ONOFRE SANTO AGOSTINI           | 132                |
+| ROMERO RODRIGUES                | 100                |
+| LAERCIO OLIVEIRA                | 98                 |
+| SANDRA ROSADO                   | 93                 |
+| RICARDO IZAR                    | 91                 |
+| ERIKA KOKAY                     | 89                 |
+| SANDES JÚNIOR                   | 84                 |
+
+
+
+Média de proposições por candidato: _15.38 proposições_.
+
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código usado para processar os dados de 2010 a 2014 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes10-14.ipynb).  
+
+
+# Resultados da análise das proposições entre 2006 e 2010
 
 Verificando o conteúdo do arquivo que, segundo o portal da Câmara, corresponde ao intervalo de 2006 a 2010, temos que existem 12781 proposições.
 
@@ -204,10 +371,10 @@ Ranking dos 10 deputados com mais proposições:
 
 Média de proposições por candidato: _15.36 proposições_.
 
-## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código dos dados de 2006 a 2010 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes06-10.ipynb).  
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código usado para processar os dados de 2006 a 2010 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes06-10.ipynb).  
 
 
-## Resultados da análise das proposições entre 2002 e 2006
+# Resultados da análise das proposições entre 2002 e 2006
 
 Verificando o conteúdo do arquivo que, segundo o portal da Câmara, corresponde ao intervalo de 2002 a 2006, temos que existem 11899 proposições.
 
@@ -371,10 +538,10 @@ Ranking dos 10 deputados com mais proposições:
 
 Média de proposições por candidato: _15.76 proposições_.
 
-## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código dos dados de 2002 a 2006 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes02-06.ipynb).  
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código usado para processar os dados de 2002 a 2006 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes02-06.ipynb).  
 
 
-## Resultados da análise das proposições entre 1998 e 2002
+# Resultados da análise das proposições entre 1998 e 2002
 
 No geral existem 3473 proposições no arquivo correspondente à este intervalo de tempo.
 
@@ -525,4 +692,4 @@ Ranking dos 10 deputados com mais proposições:
 
 Média de proposições por candidato: _4.82 proposições_.
 
-## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código dos dados de 1998 a 2002 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes98-02.ipynb).  
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código usado para processar os dados de 1998 a 2002 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes98-02.ipynb).  

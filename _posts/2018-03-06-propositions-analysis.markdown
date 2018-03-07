@@ -39,6 +39,187 @@ Antes de apresentar o estudo de fato, é interessante informar que todo o códig
 
 ## Todo o código documentado se encontra em um repositório no meu Github neste [link](https://github.com/elciusferreira/propositions-analysis).
 
+# Resultados da análise das proposições entre 2002 e 2016
+
+Verificando o conteúdo do arquivo que, segundo o portal da Câmara, corresponde ao intervalo de 2002 a 2016, temos que existem 46341 proposições.
+
+### Proposições x Estados
+
+![02_16_Estados](/assets/img/propositions-analysis/img31.png)
+
+Ranking dos 6 estados com mais proposições e as respectivas quantidades:
+
+|     Estado          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| SP                  | 5611               |
+| RJ                  | 4456               |
+| MG                  | 2636               |
+| RS                  | 2226               |
+| PR                  | 1616               |
+| BA                  | 1612               |
+
+Em 12921 proposições não há informação da UF em que  proposição se origina.
+
+### Proposições x Gênero
+
+![02_16_Genero](/assets/img/propositions-analysis/img32.png)
+
+|     Gênero         |  Qtd. Proposições  |
+| :------------------|:------------------:|
+| MASCULINO          | 30390               |
+| FEMININO           | 3052                |
+
+Em 12899 proposições não há informação do gênero do(a) parlamentar que propôs. Isso ocorre devido ao fato de que existem diversas proposições que partem de outras fontes que não são necessariamente deputados ou deputadas. Mais à frente veremos os tipos de autores das proposições e entenderemos isso melhor.
+
+### Proposições x Temas
+
+Ranking dos 6 temas mais frequentes:
+
+|     Tema            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| COMUNICAÇÕES | 8462   |
+| TRABALHO E EMPREGO | 2454              |
+| ADMINISTRAÇÃO PÚBLICA          | 2347                |
+| EDUCAÇÃO| 2072   |
+| TRIBUTAÇÃO  | 2056                |
+| DIREITO PENAL E PROCESSUAL PENAL               | 1782          |
+| SAÚDE            |  1538            |
+
+### Proposições x Tipo do Autor
+
+Ranking dos tipos de autores do mais frequente ao menos frequente:
+
+|     Tipo do Autor          |  Qtd. Proposições  |
+| :------------------------- |:------------------:|
+| DEPUTADO                   | 33441               |
+| COMISSÃO PERMANENTE        | 8836               |
+| ÓRGÃO DO PODER LEGISLATIVO | 2040                |
+| ÓRGÃO DO PODER EXECUTIVO   | 1324                |
+| ÓRGÃO DO PODER JUDICIÁRIO  | 216                 |
+| COMISSÃO DIRETORA          | 121                |
+| COMISSÃO PARLAMENTAR DE INQUÉRITO | 115 |
+| COMISSÃO MISTA PERMANENTE  |  83                |
+| COMISSÃO ESPECIAL          | 65                 |
+| MPU - MINISTÉRIO PÚBLICO DA UNIÃO  | 41         |
+| COMISSÃO PARLAMENTAR MISTA DE INQUÉRITO | 20     |
+| COMISSÃO MISTA ESPECIAL    | 11                  |
+| COMISSÃO EXTERNA           | 10                  |
+| CONSELHO | 6 |
+| DPU - DEFENSORIA PÚBLICA DA UNIÃO | 5           |
+| COMISSÃO PERMANENTE DO SENADO FEDERAL| 2        |
+| SOCIEDADE CIVIL | 2 |
+| ÓRGÃO DO SENADO FEDERAL| 2 |
+| SENADOR | 1 |
+
+### Proposições x Ano
+
+![02_16_Ano](/assets/img/propositions-analysis/img33.png)
+
+Ranking:
+
+|     Ano             |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| 2015                | 5107               |
+| 2003                | 4922               |
+| 2011                | 4054                  |
+| 2007                | 3868               |
+| 2009                | 3509               |
+| 2013                | 3115                  |
+| 2008                | 3096               |
+| 2002                | 3040               |
+| 2004                | 2692                  |
+| 2005                | 2636               |
+| 2012                | 2433               |
+| 2010                | 2251                  |
+| 2006                | 2050               |
+| 2016                | 1764               |
+| 2014                | 1747                  |
+
+
+### Proposições x Região
+
+![02_16_Regiao](/assets/img/propositions-analysis/img34.png)
+
+
+Ranking:
+
+|     Região          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| SUDESTE             | 13702               |
+| NORDESTE            | 7643               |
+| SUL                 | 5037               |
+| CENTRO-OESTE        | 3912                |
+| NORTE               | 3126                |
+
+Em 12921 proposições não há informação da região em que proposição se origina.
+
+### Proposições x Tipos
+
+![02_16_Tipos](/assets/img/propositions-analysis/img35.png)
+
+Ranking:
+
+|     Tipo            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PL                  | 31322               |
+| PDC                 | 9509                |
+| PEC                 | 1934                |
+| PLP                 | 1827                |
+| PRC                 | 1042                |
+| MPV                 | 707                 |
+
+
+Legenda:
+
+* PL = Projetos de Lei
+* PDC = Projetos de Decreto Legislativo da Câmara
+* PLP = Projetos de Lei Complementar
+* PEC = Projetos de Emenda à Constituição
+* MPV = Medidas Provisórias (MPV)
+* PRC = Projetos de Resolução da Câmara  
+
+### Proposições x Partidos Políticos
+
+![02_16_Partidos](/assets/img/propositions-analysis/img36.png)
+
+
+Ranking dos 6 partidos com mais proposições e as respectivas quantidades:
+
+|     Partido         |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PMDB                  | 4637               |
+| PT                | 3999               |
+| PSDB                | 3422                |
+| PP                 | 2308                |
+| PSB                 | 1893                |
+| PDT                 | 1807                |
+
+Em 13001 proposições não há informação do partido associado.
+
+### Proposições x Nome do Parlamentar
+
+
+Ranking dos 10 deputados com mais proposições:
+
+|     Nome do Parlamentar         |  Qtd. Proposições  |
+| :-------------------------------|:------------------:|
+| CARLOS NADER                   | 643                |
+| CARLOS BEZERRA                     | 460                |
+| JOSÉ CARLOS COUTINHO               | 327                |
+| ANTONIO CARLOS MENDES THAME           | 314                |
+| POMPEO DE MATTOS               | 302                |
+| CARLOS SOUZA                | 275                 |
+| ALBERTO FRAGA                   | 272                 |
+| CLEBER VERDE                    | 265                 |
+| SANDES JÚNIOR                    | 201                 |
+| RÔMULO GOUVEIA                 | 192                 |
+
+
+
+Média de proposições por candidato: _23.79 proposições_.
+
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código usado para processar os dados de 2002 a 2016 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes98-16.ipynb).  
+
 
 # Resultados da análise das proposições entre 2014 e 2016
 

@@ -37,13 +37,180 @@ Foram examinadas as relações entre:
 ## Informações técnicas
 Antes de apresentar o estudo de fato, é interessante informar que todo o código implementado para tal análise se deu na linguagem de programação [Python](https://www.python.org/). Algumas bibliotecas para plotagem de gráficos foram usadas, tais como [Matplotlib](https://matplotlib.org/) e [Seaborn](https://seaborn.pydata.org/). Foi utilizada ainda [Pandas](http://pandas.pydata.org/), considerada a melhor biblioteca Python para análise de dados.
 
-###### Todo o código documentado se encontra em um repositório no meu Github neste [link](https://github.com/elciusferreira/propositions-analysis).
+### Todo o código documentado se encontra em um repositório no meu Github neste [link](https://github.com/elciusferreira/propositions-analysis).
+
+
+## Resultados da análise das proposições entre 2002 e 2006
+
+Verificando o conteúdo do arquivo que, segundo o portal da Câmara, corresponde ao intervalo de 2002 a 2006, temos que existem 11899 proposições.
+
+### Proposições x Estados
+
+![02_06_Estados](/assets/img/propositions-analysis/img7.png)
+
+Ranking dos 6 estados com mais proposições e as respectivas quantidades:
+
+|     Estado          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| RJ                  | 1643               |
+| SP                  | 1453               |
+| MG                  | 623                |
+| RS                  | 606                |
+| BA                  | 386                |
+| PR                  | 342                |
+
+Em 3530 proposições não há informação da UF em que  proposição se origina.
+
+### Proposições x Gênero
+
+![02_06_Genero](/assets/img/propositions-analysis/img8.png)
+
+|     Gênero         |  Qtd. Proposições  |
+| :------------------|:------------------:|
+| MASCULINO          | 7647               |
+| FEMININO           | 722                |
+
+Em 3530 proposições não há informação do gênero do(a) parlamentar que propôs.
+
+### Proposições x Temas
+
+Ranking dos 6 temas mais frequentes:
+
+|     Tema            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| COMUNICAÇÕES        | 2362               |
+| TRABALHO E EMPREGO  | 737                |
+| EDUCAÇÃO            | 622                |
+| ADMINISTRAÇÃO PÚBLICA| 616               |
+| TRIBUTAÇÃO          | 563                |
+| ORGANIZAÇÃO POLÍTICO-ADMINISTRATIVA DO ESTADO|  492            |
+| INDÚSTRIA, COMÉRCIO E DEFESA DO CONSUMIDOR   |  474            |
+
+### Proposições x Tipo do Autor
+
+Ranking dos tipos de autores do mais frequente ao menos frequente:
+
+|     Tipo do Autor          |  Qtd. Proposições  |
+| :------------------------- |:------------------:|
+| DEPUTADO                   | 8369               |
+| COMISSÃO PERMANENTE        | 2506               |
+| ÓRGÃO DO PODER EXECUTIVO   | 444                |
+| ÓRGÃO DO PODER LEGISLATIVO | 410                |
+|COMISSÃO PARLAMENTAR DE INQUÉRITO | 43           |
+| COMISSÃO DIRETORA          |  41                |
+| ÓRGÃO DO PODER JUDICIÁRIO  |  32                |
+| COMISSÃO ESPECIAL          |15                  |
+|COMISSÃO PARLAMENTAR MISTA DE INQUÉRITO|  14     |
+|COMISSÃO MISTA PERMANENTE   | 10                 |
+| MPU - MINISTÉRIO PÚBLICO DA UNIÃO| 7            |
+| CONSELHO                   |4                   |
+| ÓRGÃO DO SENADO FEDERAL    | 2                  |
+| COMISSÃO MISTA ESPECIAL    | 2                  |
+
+### Proposições x Ano
+
+![02_06_Ano](/assets/img/propositions-analysis/img9.png)
+
+Ranking:
+
+|     Ano             |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| 2003                | 4491               |
+| 2004                | 2692               |
+| 2005                | 2636               |
+| 2006                | 2050               |
+| 2007                | 19                 |
+
+
+### Proposições x Região
+
+![02_06_Regiao](/assets/img/propositions-analysis/img10.png)
+
+
+Ranking:
+
+|     Região          |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| SUDESTE             | 3940               |
+| NORDESTE            | 1496               |
+| SUL                 | 1116               |
+| NORTE               | 912                |
+| CENTRO-OESTE        | 905                |
+
+Em 3530 proposições não há informação da região em que  proposição se origina.
+
+### Proposições x Tipos
+
+![02_06_ipos](/assets/img/propositions-analysis/img11.png)
+
+Ranking:
+
+|     Tipo            |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PL                  | 7709               |
+| PDC                 | 2631               |
+| PEC                 | 590                |
+| PLP                 | 387                |
+| PRC                 | 330                |
+| MPV                 | 252                |
+
+
+Legenda:
+
+* PL = Projetos de Lei
+* PDC = Projetos de Decreto Legislativo da Câmara
+* PLP = Projetos de Lei Complementar
+* PEC = Projetos de Emenda à Constituição
+* MPV = Medidas Provisórias (MPV)
+
+### Proposições x Partidos Políticos
+
+![02_06_Partidos](/assets/img/propositions-analysis/img12.png)
+
+
+Ranking dos 6 partidos com mais proposições e as respectivas quantidades:
+
+|     Partido         |  Qtd. Proposições  |
+| :------------------ |:------------------:|
+| PT                  | 1266               |
+| PL                  | 1212               |
+| PFL                 | 1065               |
+| PMDB                | 1055               |
+| PSDB                | 933                |
+| PTB                 | 620                |
+
+Em 3531 proposições não há informação do partido associado.
+
+### Proposições x Nome do Parlamentar
+
+
+Ranking dos 10 deputados com mais proposições:
+
+|     Nome do Parlamentar         |  Qtd. Proposições  |
+| :-------------------------------|:------------------:|
+| CARLOS NADER                    | 638                |
+| ROGERIO SILVA                   | 139                |
+| CARLOS SOUZA                    | 131                |
+| ANTONIO CARLOS MENDES THAME     | 104                |
+| ALBERTO FRAGA                   | 97                 |
+| ALMIR MOURA                     | 91                 |
+| CELSO RUSSOMANNO                | 91                 |
+| LAURA CARNEIRO                  | 88                 |
+| POMPEO DE MATTOS                | 86                 |
+| EDUARDO PAES                    | 84                 |
+
+
+
+Média de proposições por candidato: 15.76 proposições.
+
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código dos dados de 1998 a 2002 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes02-06.ipynb.  
+  
 
 ## Resultados da análise das proposições entre 1998 e 2002
 
 No geral existem 3473 proposições no arquivo correspondente à este intervalo de tempo.
 
-#### Proposições x Estados
+### Proposições x Estados
 
 ![98_02_Estados](/assets/img/propositions-analysis/img1.png)
 
@@ -60,18 +227,18 @@ Ranking dos 6 estados com mais proposições e as respectivas quantidades:
 
 Em 1985 proposições não há informação da UF em que  proposição se origina.
 
-#### Proposições x Gênero
+### Proposições x Gênero
 
 ![98_02_Genero](/assets/img/propositions-analysis/img2.png)
 
-|     Gênero          |  Qtd. Proposições  |
-| :------------------ |:------------------:|
-| MASCULINO           | 1383               |
-| FEMININO            | 105                |
+|     Gênero         |  Qtd. Proposições  |
+| :------------------|:------------------:|
+| MASCULINO          | 1383               |
+| FEMININO           | 105                |
 
 Em 1985 proposições não há informação do gênero do(a) parlamentar que propôs.
 
-#### Proposições x Temas
+### Proposições x Temas
 
 Ranking dos 6 temas mais frequentes:
 
@@ -85,8 +252,7 @@ Ranking dos 6 temas mais frequentes:
 | VIAÇÃO E TRANSPORTES|  109               |
 | EDUCAÇÃO            |  94                |
 
-#### Proposições x Tipo do Autor
-
+### Proposições x Tipo do Autor
 
 Ranking dos tipos de autores do mais frequente ao menos frequente:
 
@@ -103,13 +269,13 @@ Ranking dos tipos de autores do mais frequente ao menos frequente:
 |COMISSÃO PARLAMENTAR DE INQUÉRITO|   4           |
 |COMISSÃO DIRETORA           | 4                  |
 
-#### Proposições x Ano
+### Proposições x Ano
 
 ![98_02_Ano](/assets/img/propositions-analysis/img3.png)
 
 Como observa-se, o arquivo disponibilizado pelo portal do governo como contendo informações de 1998 até 2002 só possui dados de 2002 e alguns de 2003.
 
-#### Proposições x Região
+### Proposições x Região
 
 ![98_02_Regiao](/assets/img/propositions-analysis/img4.png)
 
@@ -126,7 +292,7 @@ Ranking:
 
 Em 1985 proposições não há informação da região em que  proposição se origina.
 
-#### Proposições x Tipos
+### Proposições x Tipos
 
 ![98_02_Tipos](/assets/img/propositions-analysis/img5.png)
 
@@ -150,7 +316,7 @@ Legenda:
 * PEC = Projetos de Emenda à Constituição
 * MPV = Medidas Provisórias (MPV)
 
-#### Proposições x Partidos Políticos
+### Proposições x Partidos Políticos
 
 ![98_02_Partidos](/assets/img/propositions-analysis/img6.png)
 
@@ -168,12 +334,12 @@ Ranking dos 6 partidos com mais proposições e as respectivas quantidades:
 
 Em 1994 proposições não há informação do partido associado.
 
-#### Proposições x Partidos Políticos
+### Proposições x Nome do Parlamentar
 
 
 Ranking dos 10 deputados com mais proposições:
 
-|     Partido         |  Qtd. Proposições  |
+|     Nome do Parlamentar         |  Qtd. Proposições  |
 | :------------------ |:------------------:|
 | JOSÉ CARLOS COUTINHO   | 327             |
 | ENI VOLTOLINI          | 42              |
@@ -188,4 +354,6 @@ Ranking dos 10 deputados com mais proposições:
 
 
 
-Média de proposições por candidato: 4.82
+Média de proposições por candidato: 4.82 proposições.
+
+## Para mais informações de cada comparação mostrada acima, basta acessar meu repositório no Github com a análise e o código dos dados de 1998 a 2002 neste [link](https://github.com/elciusferreira/propositions-analysis/blob/master/analise_proposicoes98-02.ipynb).  
